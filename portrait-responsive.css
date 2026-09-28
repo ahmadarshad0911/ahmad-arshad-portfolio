@@ -1,0 +1,17 @@
+/* Keep the portrait and orbit as one anchored composition at every viewport. */
+@media(min-width:1025px){
+  .hero-portrait{width:clamp(220px,17vw,270px);top:10%;right:max(5vw,calc((100vw - 1420px)/2 + 42px))}
+  .hero .orbit{right:max(calc(5vw + 30px),calc((100vw - 1420px)/2 + 72px));top:8%;opacity:.55;z-index:0}
+}
+@media(min-width:701px) and (max-width:1024px){
+  .hero-portrait{width:190px;right:7vw;top:11%}
+  .hero .orbit{right:calc(7vw + 28px);top:8%;opacity:.55;z-index:0}
+  .hero h1{max-width:720px}
+}
+@media(max-width:700px){
+  .hero-portrait{width:124px;right:6vw;top:10%;z-index:1}
+  .hero .orbit{right:calc(6vw + 18px);top:9%;opacity:.38;z-index:0}
+  .hero>.eyebrow{position:relative;z-index:2;max-width:165px;line-height:1.35}
+  .hero h1{max-width:100%;padding-top:200px;margin-top:0;font-size:clamp(3.35rem,15vw,4rem)}
+  .hero-bottom{position:relative;z-index:2}
+}

@@ -2,5 +2,6 @@
 main{display:flex;flex-direction:column}
 .hero{order:1}.marquee{order:2}.work{order:3}.research{order:4}.education{order:5}.experience{order:6}.community{order:7}.stack{order:8}.about{order:9}.cv-section{order:10}.contact{order:11}
 .cv-options{grid-template-columns:minmax(0,760px)}
+.live-badge{display:inline-block;margin-left:9px;padding:3px 6px;border:1px solid currentColor;border-radius:99px;color:#697d38;font:9px var(--mono);letter-spacing:.07em;vertical-align:middle}
 .contact-copy{max-width:510px;margin:-2vw 0 3vw;font-size:17px;line-height:1.5}
 @media(max-width:700px){.contact-copy{margin:-4vw 0 9vw;font-size:16px}}

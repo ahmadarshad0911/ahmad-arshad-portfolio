@@ -1,0 +1,5 @@
+.hero-portrait{position:absolute;z-index:1;right:max(5vw,calc((100% - 1420px)/2 + 42px));top:12%;width:clamp(150px,16vw,225px);margin:0;background:var(--ink);padding:8px 8px 0;box-shadow:9px 9px 0 #a61b17;transform:rotate(2deg)}
+.hero-portrait img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;filter:grayscale(18%) contrast(1.05)}
+.hero-portrait figcaption{padding:10px 3px 11px;color:var(--paper);font:10px/1.35 var(--mono);letter-spacing:.06em;text-transform:uppercase}.hero-portrait figcaption span{color:#c6bba9}
+.hero .orbit{right:max(5vw,calc((100% - 1420px)/2 + 250px));top:10%;opacity:.7}
+@media(max-width:700px){.hero-portrait{right:6vw;top:15%;width:120px;padding:5px 5px 0;box-shadow:6px 6px 0 #a61b17}.hero-portrait figcaption{padding:7px 2px 8px;font-size:7px}.hero .orbit{right:calc(6vw + 96px);top:11%;opacity:.45}}

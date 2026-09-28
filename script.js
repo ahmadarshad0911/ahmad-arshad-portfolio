@@ -30,10 +30,16 @@ window.addEventListener('scroll', updateProgress, { passive: true });
 
 const sections = document.querySelectorAll('main > section[id]');
 const navLinks = document.querySelectorAll('.section-nav a');
+const readingIndexTitle = document.querySelector('#reading-index-title');
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(({ isIntersecting, target }) => {
     if (!isIntersecting) return;
     navLinks.forEach((link) => link.classList.toggle('is-active', link.getAttribute('href') === `#${target.id}`));
+    sections.forEach((section) => section.classList.toggle('is-current', section === target));
+    if (readingIndexTitle) {
+      const title = target.querySelector('.section-head span, .eyebrow');
+      readingIndexTitle.textContent = title ? title.textContent.replace(/^\d+\s*\/\s*/, '') : target.id;
+    }
   });
 }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
 sections.forEach((section) => {

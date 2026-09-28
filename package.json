@@ -1,0 +1,7 @@
+{
+  "name": "ahmad-arshad-portfolio",
+  "private": true,
+  "scripts": {
+    "build": "node build.mjs"
+  }
+}

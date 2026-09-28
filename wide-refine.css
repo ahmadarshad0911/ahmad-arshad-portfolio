@@ -1,0 +1,19 @@
+/* Keep the page full-bleed; constrain reading measure, not the visual canvas. */
+@media(min-width:900px){
+  body{background:var(--paper);padding:0}
+  .nav,main,footer{width:100%;margin:0;background:var(--paper);border-inline:0;box-shadow:none}
+  .nav{border-top:0;border-bottom:1px solid var(--line);padding-left:max(5vw,calc((100% - 1420px)/2 + 42px));padding-right:max(5vw,calc((100% - 1420px)/2 + 42px))}
+  main{border:0;overflow:visible}
+  footer{border-inline:0;border-bottom:0;padding-left:max(5vw,calc((100% - 1420px)/2 + 42px));padding-right:max(5vw,calc((100% - 1420px)/2 + 42px))}
+  .section{padding-left:max(5vw,calc((100% - 1420px)/2 + 42px));padding-right:max(5vw,calc((100% - 1420px)/2 + 42px))}
+  .hero{min-height:760px}
+  .hero h1{max-width:1040px}
+  .section-head{max-width:none}
+  .problem-stories,.timeline,.education-card,.research-layout,.community-grid,.about-grid,.process-grid,.impact-grid,.cv-intro,.cv-options{max-width:1180px;margin-inline:auto}
+  .problem-story{grid-template-columns:72px minmax(0,1fr)}
+  .problem-story>div:last-child{max-width:970px}
+  .problem-story p:not(.story-label){max-width:920px;font-size:16px}
+  .problem-story h2{max-width:820px;font-size:clamp(2.7rem,4.3vw,4.4rem)}
+  .project{grid-template-columns:70px minmax(0,1fr) 300px;gap:28px}
+  .project-art{min-height:260px}
+}

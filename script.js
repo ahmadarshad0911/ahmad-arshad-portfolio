@@ -37,6 +37,19 @@ const sectionObserver = new IntersectionObserver((entries) => {
   });
 }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
 sections.forEach((section) => {
-  section.classList.add('scroll-reveal');
   sectionObserver.observe(section);
 });
+
+const menuToggle = document.querySelector('.menu-toggle');
+const sectionMenu = document.querySelector('.section-nav');
+if (menuToggle && sectionMenu) {
+  menuToggle.addEventListener('click', () => {
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', String(!expanded));
+    sectionMenu.classList.toggle('is-open', !expanded);
+  });
+  navLinks.forEach((link) => link.addEventListener('click', () => {
+    menuToggle.setAttribute('aria-expanded', 'false');
+    sectionMenu.classList.remove('is-open');
+  }));
+}

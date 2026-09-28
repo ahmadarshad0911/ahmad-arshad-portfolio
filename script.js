@@ -16,6 +16,14 @@ projects.forEach((project) => {
     if (art) art.style.transform = '';
     project.style.removeProperty('--card-tilt');
   });
+  const toggle = project.querySelector('.case-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const expanded = project.classList.toggle('is-expanded');
+      toggle.setAttribute('aria-expanded', String(expanded));
+      toggle.firstChild.textContent = expanded ? 'Close field note ' : 'Open field note ';
+    });
+  }
 });
 
 const reveal = new IntersectionObserver((entries) => {

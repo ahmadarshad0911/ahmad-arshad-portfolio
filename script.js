@@ -3,12 +3,18 @@ projects.forEach((project) => {
   project.addEventListener('mousemove', (event) => {
     const rect = project.getBoundingClientRect();
     const x = ((event.clientX - rect.left) / rect.width - .5) * 3;
+    const xPercent = ((event.clientX - rect.left) / rect.width) * 100;
+    const yPercent = ((event.clientY - rect.top) / rect.height) * 100;
     const art = project.querySelector('.project-art');
-    if (art) art.style.transform = `rotate(${x}deg) translateY(-4px)`;
+    project.style.setProperty('--spotlight-x', `${xPercent}%`);
+    project.style.setProperty('--spotlight-y', `${yPercent}%`);
+    project.style.setProperty('--card-tilt', `${x}deg`);
+    if (art) art.style.transform = `rotate(${x}deg) translateY(-8px) scale(1.015)`;
   });
   project.addEventListener('mouseleave', () => {
     const art = project.querySelector('.project-art');
     if (art) art.style.transform = '';
+    project.style.removeProperty('--card-tilt');
   });
 });
 
@@ -30,16 +36,11 @@ window.addEventListener('scroll', updateProgress, { passive: true });
 
 const sections = document.querySelectorAll('main > section[id]');
 const navLinks = document.querySelectorAll('.section-nav a');
-const readingIndexTitle = document.querySelector('#reading-index-title');
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(({ isIntersecting, target }) => {
     if (!isIntersecting) return;
     navLinks.forEach((link) => link.classList.toggle('is-active', link.getAttribute('href') === `#${target.id}`));
     sections.forEach((section) => section.classList.toggle('is-current', section === target));
-    if (readingIndexTitle) {
-      const title = target.querySelector('.section-head span, .eyebrow');
-      readingIndexTitle.textContent = title ? title.textContent.replace(/^\d+\s*\/\s*/, '') : target.id;
-    }
   });
 }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
 sections.forEach((section) => {

@@ -1,0 +1,9 @@
+@media(max-width:700px){
+  .project{grid-template-columns:1fr;gap:14px}
+  .project-number{margin:0}
+  .project-body{grid-column:1}
+  .project-art{grid-column:1;margin-top:8px}
+  .role{grid-template-columns:1fr;gap:12px}
+  .role-copy,.role-metric{grid-column:1}
+  .role-metric{border-left:0;border-top:2px solid var(--ink);padding:10px 0 0;margin-top:4px;width:max-content}
+}

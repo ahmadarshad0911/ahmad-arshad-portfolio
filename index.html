@@ -23,13 +23,18 @@
     <link rel="stylesheet" href="portrait-responsive.css" />
     <link rel="stylesheet" href="mobile-alignment.css" />
     <link rel="stylesheet" href="project-status.css" />
+    <link rel="stylesheet" href="navigation-motion.css" />
   </head>
   <body>
     <div class="grain"></div>
     <header class="nav">
       <a class="brand" href="#top">A<span>A</span></a>
       <p>Ahmad Arshad<br /><span>Software Engineer</span></p>
-      <a class="nav-link" href="Ahmad_Arshad_Academic_CV.pdf" download>Academic CV <span>↓</span></a>
+      <nav class="section-nav" aria-label="Portfolio sections">
+        <a href="#research">Research</a><a href="#education">Education</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#cv">CV</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-link" href="Ahmad_Arshad_Academic_CV_v5.pdf" download>Academic CV <span>↓</span></a>
+      <span class="scroll-progress" aria-hidden="true"></span>
     </header>
 
     <main id="top">
@@ -92,9 +97,9 @@
         </div>
       </section>
 
-      <section class="stack section"><div class="section-head"><span>06 / Technical foundation</span><p>Methods and tools I use to investigate ideas and build dependable prototypes.</p></div><div class="stack-list"><span>Python</span><span>FastAPI</span><span>Next.js</span><span>React</span><span>TypeScript</span><span>PostgreSQL</span><span>Docker</span><span>WordPress</span><span>LLM systems</span><span>GitHub Actions</span></div></section>
+      <section class="stack section" id="skills"><div class="section-head"><span>06 / Technical foundation</span><p>Methods and tools I use to investigate ideas and build dependable prototypes.</p></div><div class="stack-list"><span>Python</span><span>FastAPI</span><span>Next.js</span><span>React</span><span>TypeScript</span><span>PostgreSQL</span><span>Docker</span><span>WordPress</span><span>LLM systems</span><span>GitHub Actions</span></div></section>
 
-      <section class="education section">
+      <section class="education section" id="education">
         <div class="section-head"><span>03 / Education</span><p>A strong technical foundation, paired with curiosity and an ongoing habit of learning by building.</p></div>
         <div class="education-card"><div class="edu-mark">N</div><div><p class="role-title">2022 - 2026</p><h2>Bachelor of Science<br /><em>in Computer Science.</em></h2><p>NFC Institute of Engineering & Technology (NFC-IET), Multan. I completed my degree while taking on real software work and building full-stack product ideas beyond the classroom.</p></div><div class="edu-score"><strong>3.60</strong><span>CGPA / 4.00</span></div></div>
       </section>
@@ -114,10 +119,10 @@
         <div class="about-grid"><h2>Engineering with<br /><em>intent.</em></h2><div><p>I work across Python, PHP, JavaScript, and TypeScript, with a particular love for products where technology has to earn a user's trust.</p><p>My approach blends systems thinking with a strong eye for the final interface: robust on the inside, calm on the outside.</p><a href="https://www.linkedin.com/in/ahmed-arshad-0404441b3" target="_blank" rel="noreferrer">More on LinkedIn <b>↗</b></a></div></div>
       </section>
 
-      <section class="cv-section section" aria-label="CV downloads">
+      <section class="cv-section section" id="cv" aria-label="CV downloads">
         <div class="cv-intro"><p class="eyebrow">08 / Academic record</p><h2>Read the full<br /><em>academic story.</em></h2><p>A concise record of education, research interests, technical work, leadership, and academic achievements for professors and graduate supervisors.</p></div>
         <div class="cv-options">
-          <a class="cv-card academic-cv" href="Ahmad_Arshad_Academic_CV.pdf" download><span class="cv-card-top"><b>ACADEMIC CV</b><b>PDF ↓</b></span><span class="cv-card-main"><small>For professors & graduate study</small><strong>Download the<br /><em>academic CV.</em></strong><i>Education, research interests, technical depth, and academic leadership.</i></span><span class="cv-stamp">AA<br /><small>AI</small></span></a>
+          <a class="cv-card academic-cv" href="Ahmad_Arshad_Academic_CV_v5.pdf" download><span class="cv-card-top"><b>ACADEMIC CV / V5</b><b>PDF ↓</b></span><span class="cv-card-main"><small>For professors & graduate study</small><strong>Download the<br /><em>academic CV.</em></strong><i>Education, research interests, technical depth, and academic leadership.</i></span><span class="cv-stamp">AA<br /><small>AI</small></span></a>
         </div>
       </section>
 

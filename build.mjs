@@ -19,7 +19,7 @@ const files = [
   'mobile-alignment.css',
   'project-status.css',
   'navigation-motion.css',
-  'Ahmad_Arshad_Academic_CV_v5.pdf'
+  'Ahmad_Arshad_Academic_CV_v6.pdf'
 ];
 
 await rm('dist', { recursive: true, force: true });

@@ -8,6 +8,7 @@ const files = [
   'more.css',
   'tune.css',
   'research.css',
+  'proposal.css',
   'community.css',
   'cv-final.css',
   'responsive.css',
@@ -19,7 +20,8 @@ const files = [
   'mobile-alignment.css',
   'project-status.css',
   'navigation-motion.css',
-  'Ahmad_Arshad_Academic_CV_v6.pdf'
+  'Ahmad_Arshad_Academic_CV_v6.pdf',
+  'Ahmad_Arshad_AI_Safety_Research_Proposal.pdf'
 ];
 
 await rm('dist', { recursive: true, force: true });

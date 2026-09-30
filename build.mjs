@@ -10,6 +10,7 @@ const files = [
   'research.css',
   'proposal.css',
   'community.css',
+  'section-refinement.css',
   'cv-final.css',
   'responsive.css',
   'wide-refine.css',

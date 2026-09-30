@@ -12,6 +12,7 @@ const files = [
   'community.css',
   'section-refinement.css',
   'section-order.css',
+  'proposal-responsive.css',
   'cv-final.css',
   'responsive.css',
   'wide-refine.css',

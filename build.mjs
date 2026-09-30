@@ -23,7 +23,8 @@ const files = [
   'Ahmad_Arshad_Academic_CV_v6.pdf',
   'Ahmad_Arshad_AI_Safety_Research_Proposal.pdf',
   'Ahmad_Arshad_AI_Safety_Research_Proposal_2026.pdf',
-  'Ahmad_Arshad_AI_Safety_Research_Proposal_Interactive.pdf'
+  'Ahmad_Arshad_AI_Safety_Research_Proposal_Interactive.pdf',
+  'AWS_Amazon_Bedrock_Getting_Started_Certificate.pdf'
 ];
 
 await rm('dist', { recursive: true, force: true });

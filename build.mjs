@@ -11,6 +11,7 @@ const files = [
   'proposal.css',
   'community.css',
   'section-refinement.css',
+  'section-order.css',
   'cv-final.css',
   'responsive.css',
   'wide-refine.css',
